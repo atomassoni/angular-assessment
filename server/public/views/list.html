@@ -1,0 +1,6 @@
+<select ng-options="power.power_name in powers" ng-model="selected_power_name">
+</select><button ng-click="getHeroes(selected_power_name)">find heroes</button>
+
+<div ng-repeat="hero in heroes">
+  {{hero.alias}}{{hero.first_name}}{{hero.last_name}}{{hero.city}}{{hero.power}}<button ng-click"deleteHero(hero._id)">delete</button>
+</div>

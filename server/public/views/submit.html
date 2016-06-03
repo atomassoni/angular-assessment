@@ -1,0 +1,12 @@
+<label for="alias">Alias: </label>
+<input type="text" ng-model="hero.alias" name="alias"/>
+<label for="first_name">First Name: </label>
+<input type="text" ng-model="hero.first_name" name="first_name"/>
+<label for="last_name">Last Name: </label>
+<input type="text" ng-model="hero.last_name" name="last_name"/>
+<label for="city">City: </label>
+<input type="text" ng-model="hero.city" name="city"/>
+<label for="power">Power</label>
+<select ng-options="power.power_name in powers" ng-model="selected_power_name">
+</select><button>apply power</button>
+<button ng-click="addHero()">Submit</button>
