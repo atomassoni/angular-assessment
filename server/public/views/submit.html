@@ -7,6 +7,6 @@
 <label for="city">City: </label>
 <input type="text" ng-model="hero.city" name="city"/>
 <label for="power">Power</label>
-<select ng-options="power.power_name in powers" ng-model="selected_power_name">
-</select><button>apply power</button>
+<select ng-options="power.power_name for power in powers" ng-model="selected_power_name">
+</select>
 <button ng-click="addHero()">Submit</button>

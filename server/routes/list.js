@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
-
+var Heroe = require('../models/hero');
 
 
 //gets all super heroes
 router.get('/', function (req, res) {
+
   Heroe.find({}, function (err, heroes) {
     if (err) {
       res.sendStatus(500);
+      console.log("power get", power);
       return;
     }
     console.log('heroes', heroes);

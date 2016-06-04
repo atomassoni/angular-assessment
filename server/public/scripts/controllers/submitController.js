@@ -6,9 +6,11 @@ getPowers();
 
   $scope.hero = {};
   $scope.powers = [];
+  $scope.selected_power_name = {};
 
 
 $scope.addHero = function () {
+  $scope.hero.power_name = $scope.selected_power_name.power_name;
   $http.post('/submit', $scope.hero).then(function(response) {
     if(response.status == 201) {
       console.log('Hooray! Saved!');
@@ -22,7 +24,7 @@ $scope.addHero = function () {
 }
 
 function getPowers() {
-$http.get('/list').then(function(response) {
+$http.get('/submit').then(function(response) {
     console.log('Async data returned: ', response.data);
     $scope.powers = response.data;
   });

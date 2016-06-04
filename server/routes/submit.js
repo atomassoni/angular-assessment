@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var SuperPower = require('../models/superpower');
 var Heroe = require('../models/hero');
 //posts a new favorite pet
 router.post('/', function (req, res) {
